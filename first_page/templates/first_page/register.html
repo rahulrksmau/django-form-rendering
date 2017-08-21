@@ -1,0 +1,16 @@
+{% extends 'first_page/base.html' %}
+
+{% block user %}
+
+<div class="container">
+    <form method="post" novalidate>
+      {% csrf_token %}
+
+      {% include 'includes/form_base.html' with form=form %}
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
+
+{% endblock %}
